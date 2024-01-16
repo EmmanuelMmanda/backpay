@@ -11,7 +11,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $tasks = Task::all();
+        $tasks = Task::Wwhere('user_id',Auth::user()->id)->get();
 
         return response()->json(['tasks' => $tasks], 200);
     }
