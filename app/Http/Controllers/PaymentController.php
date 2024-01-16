@@ -45,16 +45,14 @@ class PaymentController extends Controller
 
     public function verifyPayment(Payment $payment)
     {
-        // Your logic to verify the payment
 
-        // For demonstration purposes, let's assume verification is successful
-        $payment->update(['status' => 'verified']);
 
-        return response()->json(['payment' => $payment], 200);
+
+        // return response()->json(['payment' => $payment], 200);
     }
 
     public function getPaymentStatus(Payment $payment)
     {
-        return response()->json(['status' => $payment->status], 200);
+        // return response()->json(['status' => $payment->status], 200);
     }
 }
